@@ -32,7 +32,7 @@ steps:
       - name: docker_sock
         path: /var/run/docker.sock
     commands:
-      - docker run -d -p 172.17.0.1:18000:80 --restart always --name football-simulator football-simulator:1.0.0.$$DRONE_BUILD_NUMBER
+      - docker run -d -p 172.17.0.1:18000:18000 --restart always --name football-simulator football-simulator:1.0.0.$$DRONE_BUILD_NUMBER
 
 volumes:
   - name: docker_sock
